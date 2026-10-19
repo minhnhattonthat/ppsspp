@@ -191,6 +191,8 @@ struct CommandLineOptions {
 	std::optional<bool> printEqualLines;
 	// Headless: print flips per emulated second at the end, counted from the loaded state (if any).
 	std::optional<bool> frameStats;
+	// Headless: draw PPGe (system dialogs) instead of skipping its atlas.  See CoreParameter::drawPPGe.
+	std::optional<bool> drawPPGe;
 
 	std::optional<std::string> screenshotFilename;
 	std::optional<std::string> screenshotFilenameSave;

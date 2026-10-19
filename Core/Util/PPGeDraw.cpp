@@ -240,7 +240,7 @@ void __PPGeSetupListArgs() {
 void __PPGeInit() {
 	// PPGe isn't really important for headless, and LoadZIM takes a long time (well not that long, but unnecessary).
 	// TODO: Load it lazily.
-	const bool skipZIM = System_GetPropertyBool(SYSPROP_IS_HEADLESS);
+	const bool skipZIM = System_GetPropertyBool(SYSPROP_IS_HEADLESS) && !PSP_CoreParameter().drawPPGe;
 
 	u8 *imageData[12]{};
 	int width[12]{};

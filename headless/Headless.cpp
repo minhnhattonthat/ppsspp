@@ -1167,6 +1167,7 @@ int main(int argc, const char* argv[]) {
 	coreParameter.mountRoot = mountRoot.empty() ? Path() : Path(mountRoot);
 	coreParameter.startBreak = false;
 	coreParameter.headLess = true;
+	coreParameter.drawPPGe = cmdLineOptions.drawPPGe.value_or(false);
 	coreParameter.dumpCompat = cmdLineOptions.dumpCompat.value_or(false);
 	if (cmdLineOptions.disableGPUFeatures.has_value()) {
 		std::vector<std::string> names;
